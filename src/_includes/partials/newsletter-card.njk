@@ -1,0 +1,24 @@
+<article
+  class="newsletter-card"
+  data-tags="{{ newsletter.data.tags | join(' ') }}"
+>
+  <div
+    class="card-content"
+    onclick="window.location.href='{{ newsletter.url }}'"
+    style="cursor: pointer"
+  >
+    <h3>
+      <a href="{{ newsletter.url }}">{{ newsletter.data.title }}</a>
+    </h3>
+    <div class="meta">
+      <span>{{ newsletter.date | readableDate }} </span>
+      <span>• {{ newsletter.templateContent | readTime }} min read</span>
+    </div>
+    <p>{{ newsletter.data.description }}</p>
+    <div class="tags">
+      {% for tag in newsletter.data.tags %}
+      <span class="tag">#{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</article>

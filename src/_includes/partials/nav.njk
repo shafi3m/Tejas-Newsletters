@@ -1,0 +1,34 @@
+<nav class="navbar" aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="nav-logo" aria-label="CyberSec Insights Home">
+      <span class="logo-text">Cyber_Tejas</span>
+    </a>
+
+    <button
+      class="hamburger"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="nav-links"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="nav-links" id="nav-links">
+      <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}"
+        >Home</a
+      >
+      <a
+        href="/newsletters"
+        class="nav-link {% if page.url == '/newsletters/' %}active{% endif %}"
+        >Newsletters</a
+      >
+      <a
+        href="/about"
+        class="nav-link {% if page.url == '/about/' %}active{% endif %}"
+        >About</a
+      >
+    </div>
+  </div>
+</nav>

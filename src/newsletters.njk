@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: All Newsletters
+description: Browse all our cybersecurity newsletters
+---
+
+<section class="newsletter-archive">
+  <h1>Newsletter Archive</h1>
+
+  <div class="filter-controls">
+    <input
+      type="text"
+      id="search"
+      placeholder="Search newsletters..."
+      class="search-bar"
+    />
+
+    <div class="tag-filters">
+      <span>Filter by tag:</span>
+      <button class="tag-filter active" data-tag="all">All</button>
+      <button class="tag-filter" data-tag="phishing">#phishing</button>
+      <button class="tag-filter" data-tag="malware">#malware</button>
+      <button class="tag-filter" data-tag="tools">#tools</button>
+      <!-- More tags will be added dynamically -->
+    </div>
+  </div>
+
+  <div class="newsletter-list">
+    {%- for newsletter in collections.newsletters -%} {% include
+    "partials/newsletter-card.njk" %} {%- endfor %}
+  </div>
+</section>

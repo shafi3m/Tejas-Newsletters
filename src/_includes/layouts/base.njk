@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} | CyberSec Insights</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="preload" href="/css/main.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_upward"
+    />
+    <!-- Open Graph / Social Media Meta Tags -->
+    <!-- <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | url }}" />
+    {% if ogImage %}
+    <meta property="og:image" content="{{ ogImage }}" />
+    {% endif %} -->
+  </head>
+  <body>
+    {% include "partials/nav.njk" %}
+
+    <main class="container">
+      {{ content | safe }}
+    </main>
+
+    <a href="#" class="back-to-top"
+      ><span class="material-symbols-outlined"> arrow_upward </span></a
+    >
+    {% include "partials/footer.njk" %}
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="newsletter-single">
+  <header class="newsletter-header">
+    <div class="newsletter-meta">
+      <time datetime="{{ page.date | readableDate }}" class="newsletter-date">
+        {{ page.date | readableDate }}
+      </time>
+      <span class="read-time">{{ content | readTime }} min read</span>
+    </div>
+
+    <h1 class="newsletter-title">{{ title }}</h1>
+
+    {% if tags %}
+    <div class="newsletter-tags">
+      {% for tag in tags %}
+      <a href="/tags/{{ tag | slug }}" class="newsletter-tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="newsletter-content">
+    {{ content | safe }}
+  </div>
+
+  <footer class="newsletter-footer">
+    <div class="newsletter-navigation">
+      {% set previous = collections.newsletters |
+      getPreviousCollectionItem(page) %} {% if previous %}
+      <a href="{{ previous.url }}" class="btn btn-outline"> ← Previous </a>
+      {% endif %}
+
+      <a href="/newsletters" class="btn">Back to All Newsletters</a>
+
+      {% set next = collections.newsletters | getNextCollectionItem(page) %} {%
+      if next %}
+      <a href="{{ next.url }}" class="btn btn-outline"> Next → </a>
+      {% endif %}
+    </div>
+  </footer>
+</article>
