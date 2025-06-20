@@ -26,6 +26,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/tejas");
+  eleventyConfig.addPassthroughCopy("src/admin");
 
   // Collections
   eleventyConfig.addCollection("newsletters", function (collection) {
