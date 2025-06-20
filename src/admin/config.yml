@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: shafi3m/Tejas-Newsletters
+  branch: main
+  site_url: https://tejas-newsletters.netlify.app
+
+media_folder: "public/assets/blog"
+public_folder: "/assets/blog"
+
+collections:
+  - name: "newsletters"
+    label: "newsletter"
+    folder: "src/newsletters"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
