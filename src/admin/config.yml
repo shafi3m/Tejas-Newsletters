@@ -4,7 +4,7 @@ backend:
   branch: main
   site_url: https://tejas-newsletters.netlify.app
 
-media_folder: "public/assets/blog"
+media_folder: "public/newsletters"
 public_folder: "/newsletters"
 
 collections:
