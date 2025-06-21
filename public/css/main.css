@@ -520,6 +520,10 @@ footer {
     font-size: 2rem;
   }
 
+  .newsletter-navigation {
+    /* flex-direction: column; */
+  }
+
   .newsletter-navigation a {
     /* width: 100%; */
     text-align: center;
@@ -596,7 +600,7 @@ footer {
 
 .btn {
   align-self: flex-start;
-  padding: 0.75rem 0.7 rem;
+  padding: 0.75rem 0.7rem;
   background: var(--primary);
   color: var(--bg-dark);
   border-radius: 4px;
