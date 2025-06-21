@@ -307,7 +307,7 @@ footer {
 
 .social-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5rem;
   margin: 1rem 0;
 }
@@ -599,19 +599,14 @@ footer {
 }
 
 .btn {
-  display: inline-block;
-  background-color: var(--primary);
-  color: var(--bg-dark);
-  padding: 0.8rem 0.7 rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.about .btn {
   align-self: flex-start;
   padding: 0.75rem 0.7rem;
+  background: var(--primary);
+  color: var(--bg-dark);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
 }
 
 .btn:hover {
