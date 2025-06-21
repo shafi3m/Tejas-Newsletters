@@ -416,7 +416,7 @@ footer {
 .newsletter-tag {
   background-color: var(--bg-darker);
   color: var(--primary);
-  padding: 0.3rem 0.8rem;
+  /* padding: 0.3rem 0.3rem; */
   border-radius: 20px;
   font-size: 0.8rem;
   text-decoration: none;

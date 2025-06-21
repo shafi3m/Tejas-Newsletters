@@ -26,7 +26,7 @@ layout: layouts/base.njk
     {{ content | safe }}
   </div>
 
-  <footer class="newsletter-footer">
+  <div class="newsletter-footer">
     <div class="newsletter-navigation">
       {% set previous = collections.newsletters |
       getPreviousCollectionItem(page) %} {% if previous %}
@@ -35,7 +35,7 @@ layout: layouts/base.njk
       </a>
       {% endif %}
 
-      <a href="/newsletters" class="btn">Back to All Newsletters</a>
+      <a href="/newsletters" class="btn">All Newsletters</a>
 
       {% set next = collections.newsletters | getNextCollectionItem(page) %} {%
       if next %}
@@ -44,5 +44,5 @@ layout: layouts/base.njk
       </a>
       {% endif %}
     </div>
-  </footer>
+  </div>
 </article>
