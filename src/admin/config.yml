@@ -2,7 +2,7 @@ backend:
   name: github
   repo: shafi3m/Tejas-Newsletters
   branch: main
-  site_url: https://tejas-newsletters.netlify.app
+  site_id: 21ab01a5-5d7c-4bc7-9635-00367ef3e79f
 
 media_folder: "public/newsletters"
 public_folder: "/newsletters"
